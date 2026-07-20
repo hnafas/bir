@@ -32,16 +32,19 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     direction: rtl;
-    overflow-x: visible;
+    overflow-x: hidden; /* به body برمی‌گردد */
     overflow-y: auto;
-    padding-top: 70px;
+    /* padding-top حذف شد، page-wrapper مدیریت می‌کند */
 }
 
-/* ========== Page Wrapper ========== */
+/* ========== Page Wrapper (کلید حل مشکل) ========== */
 .page-wrapper {
     overflow-x: hidden;
     position: relative;
     z-index: 1;
+    /* ایجاد یک لایه مستقل برای کل محتوا */
+    transform: translateZ(0);
+    padding-top: 70px; /* جبران فضای هدر */
 }
 
 .container {
@@ -307,6 +310,9 @@ img {
     left: 20px;
     z-index: 99999;
     animation: float 3s ease-in-out infinite;
+    /* اطمینان از رندر شدن در بالاترین لایه */
+    transform: translateZ(10px);
+    will-change: transform;
 }
 
 .float-card {
@@ -1197,7 +1203,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    body {
+    .page-wrapper {
         padding-top: 60px;
     }
 
