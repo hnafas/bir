@@ -47,7 +47,7 @@
     </script>
 </head>
 <body>
-    <!-- کارت شناور کمک‌های مردمی -->
+    <!-- کارت شناور کمک‌های مردمی (بیرون از page-wrapper) -->
     <div class="donation-float" id="donationFloat">
         <div class="float-card">
             <i class="fas fa-hand-holding-heart"></i>
@@ -62,487 +62,484 @@
         </div>
     </div>
 
-    <!-- هدر با لوگو -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav-logo">
-                <div class="logo-icon">
-                    <!-- لوگوی مرکز نفس - جایگزینی با فایل واقعی -->
-                    <img src="logo.png" alt="لوگوی مرکز نفس" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-lungs\'></i>';">
-                    <i class="fas fa-lungs" style="display:none;"></i>
-                </div>
-                <div class="logo-text">
-                    <h1></h1>
-                    <span>مرکز نیکوکاری و توانمندسازی نفس</span>
-                </div>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">خانه</a></li>
-                <li><a href="#about" class="nav-link">درباره ما</a></li>
-                <li><a href="#devices" class="nav-link">آموزش دستگاه‌ها</a></li>
-                <li><a href="#health-edu" class="nav-link">آموزش سلامت</a></li>
-                <li><a href="#daily-news" class="nav-link">اخبار روزانه</a></li>
-                <li><a href="#daily-tips" class="nav-link">مطالب روزانه</a></li>
-                <li><a href="#ravanara" class="nav-link">روان آرا</a></li>
-                <li><a href="#articles" class="nav-link">مطالب مفید</a></li>
-                <li><a href="#workshops" class="nav-link">دوره‌ها و کارگاه‌ها</a></li>
-                <li><a href="#gallery" class="nav-link">گالری تصاویر</a></li>
-                <li><a href="#links" class="nav-link">پیوندهای مفید</a></li>
-                <li><a href="#donation" class="nav-link">حمایت</a></li>
-            </ul>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+    <!-- ========== wrapper شروع ========== -->
+    <div class="page-wrapper">
 
-    <!-- بخش اصلی (Hero) -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="hero-title">نفس تازه‌ای برای زندگی</h2>
-                <p class="hero-subtitle">هر کمک شما، امیدی دوباره به بیماران نیازمند می‌بخشد. با هم می‌توانیم زندگی‌ها را تغییر دهیم.</p>
-                <div class="hero-buttons">
-                    <a href="#donation" class="btn btn-primary">همین حالا کمک کنید</a>
-                    <a href="#about" class="btn btn-outline">بیشتر بدانید</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,80C960,85,1056,139,1152,144C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
-    </section>
-
-    <!-- درباره ما -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>درباره مرکز نیکوکاری و توانمندسازی نفس</h2>
-                <p>با هم برای فردایی سالم‌تر</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-left" data-aos-delay="200">
-                    <p>مرکز نیکوکاری و توانمندسازی نفس از سال 1402 با هدف ارائه خدمات درمانی، آموزشی و حمایتی به خانواده‌های کم‌برخوردار و بیماران خاص آغاز به کار کرد. ما با تکیه بر کمک‌های مردمی و همراهی داوطلبان متخصص، تلاش می‌کنیم دسترسی به سلامت را برای همه ممکن سازیم.</p>
-                    <p>شفافیت، کرامت انسانی و عدالت در سلامت، ارزش‌های بنیادین ما هستند. از تأمین هزینه‌های درمانی و دارو گرفته تا آموزش مراقبت‌های بهداشتی و روانی، در کنار شما هستیم.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-user-md"></i>
-                            <span>۲۰۰+</span>
-                            <p>داوطلب متخصص</p>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-procedures"></i>
-                            <span>۳۵۰۰+</span>
-                            <p>بیمار حمایت‌شده</p>
-                        </div>
+        <!-- هدر با لوگو -->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#home" class="nav-logo">
+                    <div class="logo-icon">
+                        <img src="logo.png" alt="لوگوی مرکز نفس" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-lungs\'></i>';">
+                        <i class="fas fa-lungs" style="display:none;"></i>
                     </div>
-                </div>
-                <div class="about-image" data-aos="fade-right" data-aos-delay="400">
-                    <div class="image-wrapper">
-                        <img src="about-image.jpg" alt="تیم مرکز نفس" onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';">
-                        <div class="image-caption">نفس، پلی به سوی سلامتی</div>
+                    <div class="logo-text">
+                        <h1></h1>
+                        <span>مرکز نیکوکاری و توانمندسازی نفس</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- آموزش کار با دستگاه‌های پزشکی -->
-    <section class="devices section bg-light" id="devices">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>آموزش کار با دستگاه‌های پزشکی</h2>
-                <p>یادگیری استفاده صحیح از تجهیزات پزشکی در منزل</p>
-            </div>
-            <div class="devices-grid">
-                <div class="device-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="device-icon"><i class="fas fa-wind"></i></div>
-                    <h3>دستگاه اکسیژن‌ساز</h3>
-                    <p>نحوه روشن و خاموش کردن، تنظیم میزان اکسیژن، تمیز کردن فیلترها و نکات ایمنی.</p>
-                    <button class="btn-device" onclick="openModal('oxygen')">مشاهده آموزش کامل</button>
-                </div>
-                <div class="device-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="device-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>فشارسنج دیجیتال</h3>
-                    <p>آموزش بستن کاف، اندازه‌گیری صحیح، تفسیر نتایج و زمان مناسب اندازه‌گیری.</p>
-                    <button class="btn-device" onclick="openModal('bp')">مشاهده آموزش کامل</button>
-                </div>
-                <div class="device-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="device-icon"><i class="fas fa-tint"></i></div>
-                    <h3>دستگاه تست قند خون</h3>
-                    <p>آماده‌سازی دستگاه، نمونه‌گیری از نوک انگشت، خواندن نتیجه و ثبت در دفترچه.</p>
-                    <button class="btn-device" onclick="openModal('glucose')">مشاهده آموزش کامل</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- آموزش‌های بهداشتی و درمانی (کلیک‌شدن برای مودال) -->
-    <section class="health-edu section" id="health-edu">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>آموزش‌های بهداشتی و درمانی</h2>
-                <p>برای مشاهده آموزش کامل روی هر کارت کلیک کنید</p>
-            </div>
-            <div class="health-grid">
-                <div class="health-card" data-aos="flip-left" data-aos-delay="100" onclick="openModal('hygiene')" style="cursor:pointer;">
-                    <i class="fas fa-hands-wash"></i>
-                    <h4>بهداشت فردی</h4>
-                    <p>شستن صحیح دست‌ها، مراقبت از دهان و دندان، استحمام اصولی.</p>
-                    <span class="click-hint">کلیک کنید</span>
-                </div>
-                <div class="health-card" data-aos="flip-left" data-aos-delay="200" onclick="openModal('nutrition')" style="cursor:pointer;">
-                    <i class="fas fa-apple-alt"></i>
-                    <h4>تغذیه سالم</h4>
-                    <p>برنامه غذایی متعادل، ویتامین‌های ضروری و پرهیز از مواد مضر.</p>
-                    <span class="click-hint">کلیک کنید</span>
-                </div>
-                <div class="health-card" data-aos="flip-left" data-aos-delay="300" onclick="openModal('exercise')" style="cursor:pointer;">
-                    <i class="fas fa-dumbbell"></i>
-                    <h4>فعالیت بدنی</h4>
-                    <p>تمرینات سادهٔ روزانه، کششی و هوازی برای حفظ سلامت قلب و عروق.</p>
-                    <span class="click-hint">کلیک کنید</span>
-                </div>
-                <div class="health-card" data-aos="flip-left" data-aos-delay="400" onclick="openModal('mental')" style="cursor:pointer;">
-                    <i class="fas fa-brain"></i>
-                    <h4>سلامت روان</h4>
-                    <p>مدیریت استرس، تکنیک‌های تنفس عمیق و اهمیت خواب کافی.</p>
-                    <span class="click-hint">کلیک کنید</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش جدید: اخبار روزانه -->
-    <section class="daily-news section bg-light" id="daily-news">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>اخبار روزانه مرکز نفس</h2>
-                <p>آخرین اخبار و اطلاعیه‌های مرکز</p>
-            </div>
-            <div class="news-grid">
-                <article class="news-card" data-aos="fade-up">
-                    <div class="news-date">۲۹ تیر ۱۴۰۵</div>
-                    <h4>آغاز کمپین جمع‌آوری کمک‌های دارویی</h4>
-                    <p>مرکز نفس با همکاری خیرین، کمپین بزرگی برای تهیه داروهای ضروری بیماران خاص راه‌اندازی کرده است...</p>
-                    <a href="#" class="read-more" onclick="openModal('news1'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
-                </article>
-                <article class="news-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="news-date">۲۸ تیر ۱۴۰۵</div>
-                    <h4>برگزاری کارگاه رایگان روانشناسی</h4>
-                    <p>کارگاه "مدیریت استرس و اضطراب" با تدریس دکتر حسین بیدمشکی در بستر فضای مجازی برگزار شد...</p>
-                    <a href="#" class="read-more" onclick="openModal('news2'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
-                </article>
-                <article class="news-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="news-date">۲۵ تیر ۱۴۰۵</div>
-                    <h4>توزیع 15 بسته معیشتی بین خانواده‌های نیازمند</h4>
-                    <p>در طرح "نفس مهربانی"، 40 بسته غذایی و بهداشتی بین خانواده‌های تحت پوشش توزیع شد...</p>
-                    <a href="#" class="read-more" onclick="openModal('news3'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش جدید: مطالب روزانه -->
-    <section class="daily-tips section" id="daily-tips">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>مطالب روزانه</h2>
-                <p>نکات کوتاه و کاربردی برای زندگی سالم‌تر</p>
-            </div>
-            <div class="tips-grid">
-                <div class="tip-card" data-aos="fade-up">
-                    <i class="fas fa-lightbulb"></i>
-                    <p>«روزانه ۸ لیوان آب بنوشید تا بدن شما هیدراته بماند و سموم دفع شوند.»</p>
-                </div>
-                <div class="tip-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-lightbulb"></i>
-                    <p>«۱۵ دقیقه پیاده‌روی بعد از غذا به هضم بهتر کمک می‌کند و قند خون را تنظیم می‌کند.»</p>
-                </div>
-                <div class="tip-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-lightbulb"></i>
-                    <p>«خواب کافی (۷-۸ ساعت) سیستم ایمنی بدن را تقویت کرده و از بیماری‌ها پیشگیری می‌کند.»</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش روان آرا -->
-    <section class="ravanara-section section bg-light" id="ravanara">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>روان آرا | خدمات روان‌شناسی و مشاوره</h2>
-                <p>توانمندسازی روانی</p>
-            </div>
-            <div class="ravanara-content">
-                <div class="ravanara-intro" data-aos="fade-up">
-                    <p>مرکز نفس با همکاری <strong>سایت روان آرا</strong> <strong></strong>، خدمات تخصصی روان‌شناسی و مشاوره را به صورت رایگان و آنلاین ارائه می‌دهد. برای دریافت مشاوره فردی، خانواده، کودک و نوجوان و همچنین شرکت در کارگاه‌های روان‌شناسی، از سایت روان آرا بازدید کنید.</p>
-                </div>
-                <div class="ravanara-services" data-aos="fade-up" data-aos-delay="200">
-                    <div class="ravanara-card">
-                        <i class="fas fa-user-friends"></i>
-                        <h4>مشاوره فردی</h4>
-                        <p>کمک به خودشناسی، افزایش اعتماد به نفس و مدیریت استرس</p>
-                    </div>
-                    <div class="ravanara-card">
-                        <i class="fas fa-home"></i>
-                        <h4>مشاوره خانواده</h4>
-                        <p>بهبود روابط خانوادگی و حل تعارضات بین فردی</p>
-                    </div>
-                    <div class="ravanara-card">
-                        <i class="fas fa-child"></i>
-                        <h4>کودک و نوجوان</h4>
-                        <p>مشکلات تحصیلی، رفتاری و ارتباطی کودکان و نوجوانان</p>
-                    </div>
-                </div>
-                <div class="ravanara-cta" data-aos="zoom-in" data-aos-delay="400">
-                    <p>برای دریافت مشاوره تخصصی و مشاهده محتوای آموزشی روان‌شناسی، همین حالا از سایت روان آرا دیدن کنید:</p>
-                    <div class="ravanara-buttons">
-                        <a href="https://ravanara.github.io" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-external-link-alt"></i> بازدید از روان آرا
-                        </a>
-                        <a href="https://ravanara.github.io" target="_blank" class="btn btn-outline-dark">
-                            <i class="fas fa-calendar-check"></i> رزرو وقت مشاوره
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- مطالب آموزشی مفید (با قابلیت کلیک برای مودال) -->
-    <section class="articles section" id="articles">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>مطالب آموزشی مفید</h2>
-                <p>برای مطالعه کامل روی هر کارت کلیک کنید</p>
-            </div>
-            <div class="articles-grid">
-                <article class="article-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('baby-care')" style="cursor:pointer;">
-                    <div class="article-thumb"><i class="fas fa-baby"></i></div>
-                    <div class="article-body">
-                        <h5>مراقبت از نوزاد در خانه</h5>
-                        <p>اصول حمام کردن، تعویض پوشک و شناخت علائم خطر...</p>
-                        <span class="click-hint">کلیک کنید</span>
-                    </div>
-                </article>
-                <article class="article-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('medicine')" style="cursor:pointer;">
-                    <div class="article-thumb"><i class="fas fa-capsules"></i></div>
-                    <div class="article-body">
-                        <h5>راهنمای مصرف صحیح داروها</h5>
-                        <p>تداخلات دارویی، زمان مناسب مصرف و عوارض جانبی...</p>
-                        <span class="click-hint">کلیک کنید</span>
-                    </div>
-                </article>
-                <article class="article-card" data-aos="fade-up" data-aos-delay="300" onclick="openModal('first-aid')" style="cursor:pointer;">
-                    <div class="article-thumb"><i class="fas fa-first-aid"></i></div>
-                    <div class="article-body">
-                        <h5>کمک‌های اولیه در منزل</h5>
-                        <p>سوختگی، بریدگی، خفگی و اقدامات اورژانسی...</p>
-                        <span class="click-hint">کلیک کنید</span>
-                    </div>
-                </article>
-                <article class="article-card" data-aos="fade-up" data-aos-delay="400" onclick="openModal('infection')" style="cursor:pointer;">
-                    <div class="article-thumb"><i class="fas fa-virus"></i></div>
-                    <div class="article-body">
-                        <h5>پیشگیری از بیماری‌های واگیر</h5>
-                        <p>واکسیناسیون، رعایت بهداشت تنفسی و ضدعفونی محیط...</p>
-                        <span class="click-hint">کلیک کنید</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- دوره‌ها و کارگاه‌ها -->
-    <section class="workshops section bg-light" id="workshops">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>دوره‌ها و کارگاه‌های رایگان</h2>
-                <p>همراه با گواهی پایان دوره</p>
-            </div>
-            <div class="workshop-timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon"><i class="fas fa-heart"></i></div>
-                    <div class="timeline-content">
-                        <h4>کارگاه کمک‌های اولیه (مقدماتی)</h4>
-                        <span class="date">۱۵ مرداد ۱۴۰۵ - ساعت ۹ صبح</span>
-                        <p>آموزش احیای قلبی-ریوی، پانسمان و آتل‌بندی. ظرفیت محدود.</p>
-                        <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-icon"><i class="fas fa-smile"></i></div>
-                    <div class="timeline-content">
-                        <h4>کارگاه روانشناسی مثبت‌نگر</h4>
-                        <span class="date">۲۰ مرداد ۱۴۰۵ - ساعت ۱۶</span>
-                        <p>مدیریت اضطراب و افسردگی با تکنیک‌های CBT. ویژهٔ خانواده‌های تحت پوشش.</p>
-                        <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon"><i class="fas fa-stethoscope"></i></div>
-                    <div class="timeline-content">
-                        <h4>کارگاه مراقبت از بیماران خاص</h4>
-                        <span class="date">۱ شهریور ۱۴۰۵ - ساعت ۱۰</span>
-                        <p>آموزش مراقبت از بیماران دیابتی، تنفسی و سالمندان در منزل.</p>
-                        <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- گالری تصاویر -->
-    <section class="gallery section" id="gallery">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>آلبوم تصاویر مرکز نفس</h2>
-                <p>لحظاتی از همدلی و خدمت</p>
-            </div>
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- کاربر می‌تواند تصاویر واقعی را جایگزین کند -->
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('blob:https://web.eitaa.com/055b237e-0b34-4e3a-822d-672f76d4d933')">
-                    <img src="https://uploadkon.ir/uploads/dafb20_26d96dc487-3527-4529-8920-464e032c3f0a.jpg" alt="فعالیت مرکز نفس">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400')">
-                    <img src="https://uploadkon.ir/uploads/7c4b20_26a023f13f-582e-4420-a8e5-1a639fe5d875.jpg" alt="داوطلبان مرکز نفس">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400')">
-                    <img src="https://uploadkon.ir/uploads/886120_2683ded6f4-959e-4d9d-a6ee-4d2e9da25ef4.jpg" alt="اهدای بسته‌های معیشتی">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400')">
-                    <img src="https://uploadkon.ir/uploads/563920_2688b71136-38f9-4bed-918a-31d511f7522b.jpg" alt="آموزش بهداشت">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400')">
-                    <img src="https://uploadkon.ir/uploads/f6b620_2638045e7a-403f-4db9-8075-4770047e5133.jpg" alt="ویزیت رایگان">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=400')">
-                    <img src="https://uploadkon.ir/uploads/feab20_260b1a79f0-9238-4b9e-b4cf-5bbb7b197dbb.jpg" alt="کارگاه آموزشی">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- پیوند به سایت‌های پزشکی دیگر -->
-    <section class="links section bg-light" id="links">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>پیوندهای مفید پزشکی و روانشناسی</h2>
-                <p>دسترسی سریع به منابع معتبر سلامت و روان</p>
-            </div>
-            <div class="links-grid">
-                <a href="https://www.who.int/fa" target="_blank" class="link-card" data-aos="fade-up">
-                    <i class="fas fa-globe-americas"></i>
-                    <span>سازمان بهداشت جهانی (WHO)</span>
                 </a>
-                <a href="https://behdasht.gov.ir" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-hospital"></i>
-                    <span>وزارت بهداشت ایران</span>
-                </a>
-                <a href="https://ravanara.github.io" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-brain"></i>
-                    <span>روان آرا | حسین بیدمشکی</span>
-                </a>
-                <a href="https://www.msf.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-ambulance"></i>
-                    <span>پزشکان بدون مرز</span>
-                </a>
-                <a href="https://www.mayoclinic.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-clinic-medical"></i>
-                    <span>مایو کلینیک (Mayo Clinic)</span>
-                </a>
-                <a href="https://www.webmd.com" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-laptop-medical"></i>
-                    <span>WebMD</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش حمایت مالی (اهدا) -->
-    <section class="donation section bg-primary-dark" id="donation">
-        <div class="container">
-            <div class="section-header light" data-aos="fade-up">
-                <h2>حمایت مالی و صدقات</h2>
-                <p>با هر مبلغی که در توان دارید، نفس تازه‌ای ببخشید</p>
-            </div>
-            <div class="donation-card" data-aos="flip-up">
-                <div class="card-details">
-                    <div class="bank-info">
-                        <h4>شماره کارت </h4>
-                        <div class="card-number-box">
-                            <span id="mainCardNumber">6037997970888369</span>
-                            <button class="copy-btn-large" onclick="copyMainCard()"><i class="fas fa-copy"></i> کپی شماره کارت</button>
-                        </div>
-                        <h4>شماره USSD</h4>
-                        <p>*8877*392570#</p>
-                    </div>
-                    <div class="qr-code">
-                        <img src="https://uploadkon.ir/uploads/a0ea20_264c39aec8-ffe2-4ef2-86a6-7c191e93e6e2.jpg" onerror="this.style.display='none'">
-                        <p>در کنار هم باشیم</p>
-                    </div>
-                </div>
-                <div class="donation-message">
-                    <i class="fas fa-quote-right"></i>
-                    <p>«مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِي إِسْرَائِيلَ أَنَّهُ مَنْ قَتَلَ نَفْسًا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِي الْأَرْضِ فَكَأَنَّمَا قَتَلَ النَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا ۚ وَلَقَدْ جَاءَتْهُمْ رُسُلُنَا بِالْبَيِّنَاتِ ثُمَّ إِنَّ كَثِيرًا مِنْهُمْ بَعْدَ ذَٰلِكَ فِي الْأَرْضِ لَمُسْرِفُونَ
-
-ترجمه فارسی:
-
-به همین جهت، بر بنی‌اسرائیل مقرّر داشتیم که هر کس، انسانی را بدون ارتکاب قتل یا فساد در روی زمین بکشد، چنان است که گویی همه انسان‌ها را کشته؛ و هر کس، انسانی را از مرگ رهایی بخشد، چنان است که گویی همه مردم را زنده کرده است. و رسولان ما، دلایل روشن برای بنی‌اسرائیل آوردند، اما بسیاری از آنها، پس از آن در روی زمین، تعدّی و اسراف کردند.
-
-»</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- فوتر -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>مرکز نیکوکاری و توانمندسازی نفس</h4>
-                <p>بیرجند، خیابان ارتش، درمانگاه شهدا، طبقه دوم</p>
-                <p>تلفن: ۰۹۱۵۰۹۵۶۴۱۹</p>
-                <p>ارتباط در بله: @hbidmeshki</p>
-                <p></p>
-            </div>
-            <div class="footer-col">
-                <h4>دسترسی سریع</h4>
-                <ul>
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#devices">آموزش دستگاه‌ها</a></li>
-                    <li><a href="#health-edu">آموزش سلامت</a></li>
-                    <li><a href="#daily-news">اخبار روزانه</a></li>
-                    <li><a href="#daily-tips">مطالب روزانه</a></li>
-                    <li><a href="#ravanara">روان آرا</a></li>
-                    <li><a href="#workshops">کارگاه‌ها</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">خانه</a></li>
+                    <li><a href="#about" class="nav-link">درباره ما</a></li>
+                    <li><a href="#devices" class="nav-link">آموزش دستگاه‌ها</a></li>
+                    <li><a href="#health-edu" class="nav-link">آموزش سلامت</a></li>
+                    <li><a href="#daily-news" class="nav-link">اخبار روزانه</a></li>
+                    <li><a href="#daily-tips" class="nav-link">مطالب روزانه</a></li>
+                    <li><a href="#ravanara" class="nav-link">روان آرا</a></li>
+                    <li><a href="#articles" class="nav-link">مطالب مفید</a></li>
+                    <li><a href="#workshops" class="nav-link">دوره‌ها و کارگاه‌ها</a></li>
+                    <li><a href="#gallery" class="nav-link">گالری تصاویر</a></li>
+                    <li><a href="#links" class="nav-link">پیوندهای مفید</a></li>
+                    <li><a href="#donation" class="nav-link">حمایت</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h4>سایت‌های مرتبط</h4>
-                <ul>
-                    <li><a href="https://ravanara.github.io" target="_blank">روان آرا | روان‌شناسی</a></li>
-                    <li><a href="https://hnafas.github.io/bir/">مرکز نفس</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>ما را دنبال کنید</h4>
-                <div class="social-icons">
-                    <a href="https://eitaa.com/nafasekhorasanejonoobi" target="_blank" title="ایتا"><i class="fas fa-comment"></i></a>
-                    <a href="https://t.me/ravanarahbm" target="_blank" title="تلگرام"><i class="fab fa-telegram"></i></a>
-                    <a href="https://ble.ir/ravanara1" target="_blank" title="بله"><i class="fas fa-comments"></i></a>
-                    <a href="https://ravanara.github.io" target="_blank" title="روان آرا"><i class="fas fa-globe"></i></a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- بخش اصلی (Hero) -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="hero-title">نفس تازه‌ای برای زندگی</h2>
+                    <p class="hero-subtitle">هر کمک شما، امیدی دوباره به بیماران نیازمند می‌بخشد. با هم می‌توانیم زندگی‌ها را تغییر دهیم.</p>
+                    <div class="hero-buttons">
+                        <a href="#donation" class="btn btn-primary">همین حالا کمک کنید</a>
+                        <a href="#about" class="btn btn-outline">بیشتر بدانید</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>تمامی حقوق برای مرکز نیکوکاری و توانمندسازی نفس محفوظ است © ۱۴۰۵ | طراحی و مدیریت: حسین بیدمشکی</p>
-        </div>
-    </footer>
+            <div class="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,80C960,85,1056,139,1152,144C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            </div>
+        </section>
+
+        <!-- درباره ما -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>درباره مرکز نیکوکاری و توانمندسازی نفس</h2>
+                    <p>با هم برای فردایی سالم‌تر</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+                        <p>مرکز نیکوکاری و توانمندسازی نفس از سال 1402 با هدف ارائه خدمات درمانی، آموزشی و حمایتی به خانواده‌های کم‌برخوردار و بیماران خاص آغاز به کار کرد. ما با تکیه بر کمک‌های مردمی و همراهی داوطلبان متخصص، تلاش می‌کنیم دسترسی به سلامت را برای همه ممکن سازیم.</p>
+                        <p>شفافیت، کرامت انسانی و عدالت در سلامت، ارزش‌های بنیادین ما هستند. از تأمین هزینه‌های درمانی و دارو گرفته تا آموزش مراقبت‌های بهداشتی و روانی، در کنار شما هستیم.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-user-md"></i>
+                                <span>۲۰۰+</span>
+                                <p>داوطلب متخصص</p>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-procedures"></i>
+                                <span>۳۵۰۰+</span>
+                                <p>بیمار حمایت‌شده</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image" data-aos="fade-right" data-aos-delay="400">
+                        <div class="image-wrapper">
+                            <img src="about-image.jpg" alt="تیم مرکز نفس" onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';">
+                            <div class="image-caption">نفس، پلی به سوی سلامتی</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- آموزش کار با دستگاه‌های پزشکی -->
+        <section class="devices section bg-light" id="devices">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>آموزش کار با دستگاه‌های پزشکی</h2>
+                    <p>یادگیری استفاده صحیح از تجهیزات پزشکی در منزل</p>
+                </div>
+                <div class="devices-grid">
+                    <div class="device-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="device-icon"><i class="fas fa-wind"></i></div>
+                        <h3>دستگاه اکسیژن‌ساز</h3>
+                        <p>نحوه روشن و خاموش کردن، تنظیم میزان اکسیژن، تمیز کردن فیلترها و نکات ایمنی.</p>
+                        <button class="btn-device" onclick="openModal('oxygen')">مشاهده آموزش کامل</button>
+                    </div>
+                    <div class="device-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="device-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>فشارسنج دیجیتال</h3>
+                        <p>آموزش بستن کاف، اندازه‌گیری صحیح، تفسیر نتایج و زمان مناسب اندازه‌گیری.</p>
+                        <button class="btn-device" onclick="openModal('bp')">مشاهده آموزش کامل</button>
+                    </div>
+                    <div class="device-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="device-icon"><i class="fas fa-tint"></i></div>
+                        <h3>دستگاه تست قند خون</h3>
+                        <p>آماده‌سازی دستگاه، نمونه‌گیری از نوک انگشت، خواندن نتیجه و ثبت در دفترچه.</p>
+                        <button class="btn-device" onclick="openModal('glucose')">مشاهده آموزش کامل</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- آموزش‌های بهداشتی و درمانی (کلیک‌شدن برای مودال) -->
+        <section class="health-edu section" id="health-edu">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>آموزش‌های بهداشتی و درمانی</h2>
+                    <p>برای مشاهده آموزش کامل روی هر کارت کلیک کنید</p>
+                </div>
+                <div class="health-grid">
+                    <div class="health-card" data-aos="flip-left" data-aos-delay="100" onclick="openModal('hygiene')" style="cursor:pointer;">
+                        <i class="fas fa-hands-wash"></i>
+                        <h4>بهداشت فردی</h4>
+                        <p>شستن صحیح دست‌ها، مراقبت از دهان و دندان، استحمام اصولی.</p>
+                        <span class="click-hint">کلیک کنید</span>
+                    </div>
+                    <div class="health-card" data-aos="flip-left" data-aos-delay="200" onclick="openModal('nutrition')" style="cursor:pointer;">
+                        <i class="fas fa-apple-alt"></i>
+                        <h4>تغذیه سالم</h4>
+                        <p>برنامه غذایی متعادل، ویتامین‌های ضروری و پرهیز از مواد مضر.</p>
+                        <span class="click-hint">کلیک کنید</span>
+                    </div>
+                    <div class="health-card" data-aos="flip-left" data-aos-delay="300" onclick="openModal('exercise')" style="cursor:pointer;">
+                        <i class="fas fa-dumbbell"></i>
+                        <h4>فعالیت بدنی</h4>
+                        <p>تمرینات سادهٔ روزانه، کششی و هوازی برای حفظ سلامت قلب و عروق.</p>
+                        <span class="click-hint">کلیک کنید</span>
+                    </div>
+                    <div class="health-card" data-aos="flip-left" data-aos-delay="400" onclick="openModal('mental')" style="cursor:pointer;">
+                        <i class="fas fa-brain"></i>
+                        <h4>سلامت روان</h4>
+                        <p>مدیریت استرس، تکنیک‌های تنفس عمیق و اهمیت خواب کافی.</p>
+                        <span class="click-hint">کلیک کنید</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش جدید: اخبار روزانه -->
+        <section class="daily-news section bg-light" id="daily-news">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>اخبار روزانه مرکز نفس</h2>
+                    <p>آخرین اخبار و اطلاعیه‌های مرکز</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card" data-aos="fade-up">
+                        <div class="news-date">۲۹ تیر ۱۴۰۵</div>
+                        <h4>آغاز کمپین جمع‌آوری کمک‌های دارویی</h4>
+                        <p>مرکز نفس با همکاری خیرین، کمپین بزرگی برای تهیه داروهای ضروری بیماران خاص راه‌اندازی کرده است...</p>
+                        <a href="#" class="read-more" onclick="openModal('news1'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
+                    </article>
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="news-date">۲۸ تیر ۱۴۰۵</div>
+                        <h4>برگزاری کارگاه رایگان روانشناسی</h4>
+                        <p>کارگاه "مدیریت استرس و اضطراب" با تدریس دکتر حسین بیدمشکی در بستر فضای مجازی برگزار شد...</p>
+                        <a href="#" class="read-more" onclick="openModal('news2'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
+                    </article>
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="news-date">۲۵ تیر ۱۴۰۵</div>
+                        <h4>توزیع 15 بسته معیشتی بین خانواده‌های نیازمند</h4>
+                        <p>در طرح "نفس مهربانی"، 40 بسته غذایی و بهداشتی بین خانواده‌های تحت پوشش توزیع شد...</p>
+                        <a href="#" class="read-more" onclick="openModal('news3'); return false;">ادامه خبر <i class="fas fa-arrow-left"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش جدید: مطالب روزانه -->
+        <section class="daily-tips section" id="daily-tips">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>مطالب روزانه</h2>
+                    <p>نکات کوتاه و کاربردی برای زندگی سالم‌تر</p>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-card" data-aos="fade-up">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>«روزانه ۸ لیوان آب بنوشید تا بدن شما هیدراته بماند و سموم دفع شوند.»</p>
+                    </div>
+                    <div class="tip-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>«۱۵ دقیقه پیاده‌روی بعد از غذا به هضم بهتر کمک می‌کند و قند خون را تنظیم می‌کند.»</p>
+                    </div>
+                    <div class="tip-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>«خواب کافی (۷-۸ ساعت) سیستم ایمنی بدن را تقویت کرده و از بیماری‌ها پیشگیری می‌کند.»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش روان آرا -->
+        <section class="ravanara-section section bg-light" id="ravanara">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>روان آرا | خدمات روان‌شناسی و مشاوره</h2>
+                    <p>توانمندسازی روانی</p>
+                </div>
+                <div class="ravanara-content">
+                    <div class="ravanara-intro" data-aos="fade-up">
+                        <p>مرکز نفس با همکاری <strong>سایت روان آرا</strong> <strong></strong>، خدمات تخصصی روان‌شناسی و مشاوره را به صورت رایگان و آنلاین ارائه می‌دهد. برای دریافت مشاوره فردی، خانواده، کودک و نوجوان و همچنین شرکت در کارگاه‌های روان‌شناسی، از سایت روان آرا بازدید کنید.</p>
+                    </div>
+                    <div class="ravanara-services" data-aos="fade-up" data-aos-delay="200">
+                        <div class="ravanara-card">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>مشاوره فردی</h4>
+                            <p>کمک به خودشناسی، افزایش اعتماد به نفس و مدیریت استرس</p>
+                        </div>
+                        <div class="ravanara-card">
+                            <i class="fas fa-home"></i>
+                            <h4>مشاوره خانواده</h4>
+                            <p>بهبود روابط خانوادگی و حل تعارضات بین فردی</p>
+                        </div>
+                        <div class="ravanara-card">
+                            <i class="fas fa-child"></i>
+                            <h4>کودک و نوجوان</h4>
+                            <p>مشکلات تحصیلی، رفتاری و ارتباطی کودکان و نوجوانان</p>
+                        </div>
+                    </div>
+                    <div class="ravanara-cta" data-aos="zoom-in" data-aos-delay="400">
+                        <p>برای دریافت مشاوره تخصصی و مشاهده محتوای آموزشی روان‌شناسی، همین حالا از سایت روان آرا دیدن کنید:</p>
+                        <div class="ravanara-buttons">
+                            <a href="https://ravanara.github.io" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> بازدید از روان آرا
+                            </a>
+                            <a href="https://ravanara.github.io" target="_blank" class="btn btn-outline-dark">
+                                <i class="fas fa-calendar-check"></i> رزرو وقت مشاوره
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- مطالب آموزشی مفید (با قابلیت کلیک برای مودال) -->
+        <section class="articles section" id="articles">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>مطالب آموزشی مفید</h2>
+                    <p>برای مطالعه کامل روی هر کارت کلیک کنید</p>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('baby-care')" style="cursor:pointer;">
+                        <div class="article-thumb"><i class="fas fa-baby"></i></div>
+                        <div class="article-body">
+                            <h5>مراقبت از نوزاد در خانه</h5>
+                            <p>اصول حمام کردن، تعویض پوشک و شناخت علائم خطر...</p>
+                            <span class="click-hint">کلیک کنید</span>
+                        </div>
+                    </article>
+                    <article class="article-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('medicine')" style="cursor:pointer;">
+                        <div class="article-thumb"><i class="fas fa-capsules"></i></div>
+                        <div class="article-body">
+                            <h5>راهنمای مصرف صحیح داروها</h5>
+                            <p>تداخلات دارویی، زمان مناسب مصرف و عوارض جانبی...</p>
+                            <span class="click-hint">کلیک کنید</span>
+                        </div>
+                    </article>
+                    <article class="article-card" data-aos="fade-up" data-aos-delay="300" onclick="openModal('first-aid')" style="cursor:pointer;">
+                        <div class="article-thumb"><i class="fas fa-first-aid"></i></div>
+                        <div class="article-body">
+                            <h5>کمک‌های اولیه در منزل</h5>
+                            <p>سوختگی، بریدگی، خفگی و اقدامات اورژانسی...</p>
+                            <span class="click-hint">کلیک کنید</span>
+                        </div>
+                    </article>
+                    <article class="article-card" data-aos="fade-up" data-aos-delay="400" onclick="openModal('infection')" style="cursor:pointer;">
+                        <div class="article-thumb"><i class="fas fa-virus"></i></div>
+                        <div class="article-body">
+                            <h5>پیشگیری از بیماری‌های واگیر</h5>
+                            <p>واکسیناسیون، رعایت بهداشت تنفسی و ضدعفونی محیط...</p>
+                            <span class="click-hint">کلیک کنید</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- دوره‌ها و کارگاه‌ها -->
+        <section class="workshops section bg-light" id="workshops">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>دوره‌ها و کارگاه‌های رایگان</h2>
+                    <p>همراه با گواهی پایان دوره</p>
+                </div>
+                <div class="workshop-timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+                        <div class="timeline-content">
+                            <h4>کارگاه کمک‌های اولیه (مقدماتی)</h4>
+                            <span class="date">۱۵ مرداد ۱۴۰۵ - ساعت ۹ صبح</span>
+                            <p>آموزش احیای قلبی-ریوی، پانسمان و آتل‌بندی. ظرفیت محدود.</p>
+                            <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon"><i class="fas fa-smile"></i></div>
+                        <div class="timeline-content">
+                            <h4>کارگاه روانشناسی مثبت‌نگر</h4>
+                            <span class="date">۲۰ مرداد ۱۴۰۵ - ساعت ۱۶</span>
+                            <p>مدیریت اضطراب و افسردگی با تکنیک‌های CBT. ویژهٔ خانواده‌های تحت پوشش.</p>
+                            <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon"><i class="fas fa-stethoscope"></i></div>
+                        <div class="timeline-content">
+                            <h4>کارگاه مراقبت از بیماران خاص</h4>
+                            <span class="date">۱ شهریور ۱۴۰۵ - ساعت ۱۰</span>
+                            <p>آموزش مراقبت از بیماران دیابتی، تنفسی و سالمندان در منزل.</p>
+                            <a href="https://ravanara.github.io" target="_blank" class="btn btn-small">ثبت‌نام رایگان</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- گالری تصاویر -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>آلبوم تصاویر مرکز نفس</h2>
+                    <p>لحظاتی از همدلی و خدمت</p>
+                </div>
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('blob:https://web.eitaa.com/055b237e-0b34-4e3a-822d-672f76d4d933')">
+                        <img src="https://uploadkon.ir/uploads/dafb20_26d96dc487-3527-4529-8920-464e032c3f0a.jpg" alt="فعالیت مرکز نفس">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400')">
+                        <img src="https://uploadkon.ir/uploads/7c4b20_26a023f13f-582e-4420-a8e5-1a639fe5d875.jpg" alt="داوطلبان مرکز نفس">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400')">
+                        <img src="https://uploadkon.ir/uploads/886120_2683ded6f4-959e-4d9d-a6ee-4d2e9da25ef4.jpg" alt="اهدای بسته‌های معیشتی">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400')">
+                        <img src="https://uploadkon.ir/uploads/563920_2688b71136-38f9-4bed-918a-31d511f7522b.jpg" alt="آموزش بهداشت">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400')">
+                        <img src="https://uploadkon.ir/uploads/f6b620_2638045e7a-403f-4db9-8075-4770047e5133.jpg" alt="ویزیت رایگان">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=400')">
+                        <img src="https://uploadkon.ir/uploads/feab20_260b1a79f0-9238-4b9e-b4cf-5bbb7b197dbb.jpg" alt="کارگاه آموزشی">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- پیوند به سایت‌های پزشکی دیگر -->
+        <section class="links section bg-light" id="links">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>پیوندهای مفید پزشکی و روانشناسی</h2>
+                    <p>دسترسی سریع به منابع معتبر سلامت و روان</p>
+                </div>
+                <div class="links-grid">
+                    <a href="https://www.who.int/fa" target="_blank" class="link-card" data-aos="fade-up">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>سازمان بهداشت جهانی (WHO)</span>
+                    </a>
+                    <a href="https://behdasht.gov.ir" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-hospital"></i>
+                        <span>وزارت بهداشت ایران</span>
+                    </a>
+                    <a href="https://ravanara.github.io" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-brain"></i>
+                        <span>روان آرا | حسین بیدمشکی</span>
+                    </a>
+                    <a href="https://www.msf.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-ambulance"></i>
+                        <span>پزشکان بدون مرز</span>
+                    </a>
+                    <a href="https://www.mayoclinic.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-clinic-medical"></i>
+                        <span>مایو کلینیک (Mayo Clinic)</span>
+                    </a>
+                    <a href="https://www.webmd.com" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-laptop-medical"></i>
+                        <span>WebMD</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش حمایت مالی (اهدا) -->
+        <section class="donation section bg-primary-dark" id="donation">
+            <div class="container">
+                <div class="section-header light" data-aos="fade-up">
+                    <h2>حمایت مالی و صدقات</h2>
+                    <p>با هر مبلغی که در توان دارید، نفس تازه‌ای ببخشید</p>
+                </div>
+                <div class="donation-card" data-aos="flip-up">
+                    <div class="card-details">
+                        <div class="bank-info">
+                            <h4>شماره کارت </h4>
+                            <div class="card-number-box">
+                                <span id="mainCardNumber">6037997970888369</span>
+                                <button class="copy-btn-large" onclick="copyMainCard()"><i class="fas fa-copy"></i> کپی شماره کارت</button>
+                            </div>
+                            <h4>شماره USSD</h4>
+                            <p>*8877*392570#</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="https://uploadkon.ir/uploads/a0ea20_264c39aec8-ffe2-4ef2-86a6-7c191e93e6e2.jpg" onerror="this.style.display='none'">
+                            <p>در کنار هم باشیم</p>
+                        </div>
+                    </div>
+                    <div class="donation-message">
+                        <i class="fas fa-quote-right"></i>
+                        <p>«مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِي إِسْرَائِيلَ أَنَّهُ مَنْ قَتَلَ نَفْسًا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِي الْأَرْضِ فَكَأَنَّمَا قَتَلَ النَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- فوتر -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h4>مرکز نیکوکاری و توانمندسازی نفس</h4>
+                    <p>بیرجند، خیابان ارتش، درمانگاه شهدا، طبقه دوم</p>
+                    <p>تلفن: ۰۹۱۵۰۹۵۶۴۱۹</p>
+                    <p>ارتباط در بله: @hbidmeshki</p>
+                </div>
+                <div class="footer-col">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#devices">آموزش دستگاه‌ها</a></li>
+                        <li><a href="#health-edu">آموزش سلامت</a></li>
+                        <li><a href="#daily-news">اخبار روزانه</a></li>
+                        <li><a href="#daily-tips">مطالب روزانه</a></li>
+                        <li><a href="#ravanara">روان آرا</a></li>
+                        <li><a href="#workshops">کارگاه‌ها</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>سایت‌های مرتبط</h4>
+                    <ul>
+                        <li><a href="https://ravanara.github.io" target="_blank">روان آرا | روان‌شناسی</a></li>
+                        <li><a href="https://hnafas.github.io/bir/">مرکز نفس</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ما را دنبال کنید</h4>
+                    <div class="social-icons">
+                        <a href="https://eitaa.com/nafasekhorasanejonoobi" target="_blank" title="ایتا"><i class="fas fa-comment"></i></a>
+                        <a href="https://t.me/ravanarahbm" target="_blank" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                        <a href="https://ble.ir/ravanara1" target="_blank" title="بله"><i class="fas fa-comments"></i></a>
+                        <a href="https://ravanara.github.io" target="_blank" title="روان آرا"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>تمامی حقوق برای مرکز نیکوکاری و توانمندسازی نفس محفوظ است © ۱۴۰۵ | طراحی و مدیریت: حسین بیدمشکی</p>
+            </div>
+        </footer>
+
+    </div>
+    <!-- ========== wrapper پایان ========== -->
 
     <!-- مودال جامع -->
     <div class="modal" id="mainModal">
