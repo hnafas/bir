@@ -32,8 +32,11 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     direction: rtl;
-    overflow-x: hidden;
+    /* تغییر اصلی: استفاده از overflow-y به جای overflow-x و clip */
+    overflow-x: visible; 
+    overflow-y: auto;
     padding-top: 70px;
+    position: relative; /* برای اطمینان از context */
 }
 
 .container {
@@ -292,27 +295,31 @@ img {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
 }
 
-/* ========== Floating Donation Card (اصلاح نهایی) ========== */
+/* ========== Floating Donation Card (اصلاح‌شده) ========== */
 .donation-float {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 10000;
+    z-index: 99999; /* بالاترین مقدار ممکن */
     animation: float 3s ease-in-out infinite;
-    /* حذف هرگونه تغییر اندازه ناخواسته */
-    max-width: calc(100vw - 40px);
+    /* اطمینان از اینکه هیچ المانی آن را مخفی نکند */
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
 }
 
 .float-card {
     background: var(--white);
     border-radius: 20px;
     padding: 18px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
     text-align: center;
     width: 230px;
-    max-width: 100%; /* ارث‌بری از والد */
+    max-width: calc(100vw - 40px);
     border-top: 4px solid var(--accent);
     transition: all 0.3s ease;
+    /* رفع مشکل برش احتمالی */
+    position: relative;
 }
 
 .float-card i {
@@ -390,48 +397,6 @@ img {
     }
     50% {
         transform: translateY(-8px);
-    }
-}
-
-/* تنظیمات موبایل برای کارت شناور */
-@media (max-width: 768px) {
-    .donation-float {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .float-card {
-        width: 200px;
-        padding: 14px;
-    }
-
-    .float-card i {
-        font-size: 24px;
-    }
-
-    .float-title {
-        font-size: 13px;
-    }
-
-    .card-number {
-        font-size: 12px;
-    }
-
-    .float-donate-btn {
-        font-size: 12px;
-        padding: 5px 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .donation-float {
-        bottom: 10px;
-        left: 10px;
-    }
-
-    .float-card {
-        width: 180px;
-        padding: 12px;
     }
 }
 
@@ -1304,6 +1269,28 @@ img {
         gap: 16px;
     }
 
+    .donation-float {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .float-card {
+        width: 200px;
+        padding: 14px;
+    }
+
+    .float-card i {
+        font-size: 24px;
+    }
+
+    .float-title {
+        font-size: 13px;
+    }
+
+    .card-number {
+        font-size: 12px;
+    }
+
     .card-details {
         flex-direction: column;
         align-items: center;
@@ -1328,6 +1315,16 @@ img {
 }
 
 @media (max-width: 480px) {
+    .donation-float {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .float-card {
+        width: 180px;
+        padding: 12px;
+    }
+
     .hero-title {
         font-size: 26px;
     }
