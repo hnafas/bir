@@ -3,226 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرکز خیریه نفس - نفس تازه‌ای برای زندگی</title>
+    <title>مرکز خیریه نفس | نفس تازه‌ای برای زندگی</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- هدر و منوی ناوبری -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
+    <!-- کارت شناور کمک‌های مردمی -->
+    <div class="donation-float" id="donationFloat">
+        <div class="float-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span class="float-title">کمک‌های مردمی</span>
+            <div class="card-number-container">
+                <span class="card-number" id="cardNumber">۶۲۱۹-۸۶۱۰-۰۰۰۰-۱۲۳۴</span>
+                <button class="copy-btn" onclick="copyCardNumber()" title="کپی شماره کارت">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <a href="#donation" class="float-donate-btn">هدایت به بخش کمک‌ها</a>
+        </div>
+    </div>
+
+    <!-- هدر -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+                <div class="logo-text">
                     <h1>نفس</h1>
                     <span>مرکز خیریه</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#about">درباره ما</a></li>
-                    <li><a href="#activities">فعالیت‌ها</a></li>
-                    <li><a href="#stats">دستاوردها</a></li>
-                    <li><a href="#support">حمایت</a></li>
-                    <li><a href="#contact">تماس</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">خانه</a></li>
+                <li><a href="#about" class="nav-link">درباره ما</a></li>
+                <li><a href="#devices" class="nav-link">آموزش دستگاه‌ها</a></li>
+                <li><a href="#health-edu" class="nav-link">آموزش سلامت</a></li>
+                <li><a href="#articles" class="nav-link">مطالب مفید</a></li>
+                <li><a href="#workshops" class="nav-link">دوره‌ها و کارگاه‌ها</a></li>
+                <li><a href="#gallery" class="nav-link">گالری تصاویر</a></li>
+                <li><a href="#links" class="nav-link">پیوندهای مفید</a></li>
+                <li><a href="#donation" class="nav-link">حمایت</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
 
-    <!-- بخش اصلی -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>نفس تازه‌ای برای زندگی</h2>
-                <p>ما در مرکز خیریه نفس با همراهی شما عزیزان، برای بهبود زندگی نیازمندان تلاش می‌کنیم. هر نفس، یک زندگی جدید است.</p>
+    <!-- بخش اصلی (Hero) -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="hero-title">نفس تازه‌ای برای زندگی</h2>
+                <p class="hero-subtitle">هر کمک شما، امیدی دوباره به بیماران نیازمند می‌بخشد. با هم می‌توانیم زندگی‌ها را تغییر دهیم.</p>
                 <div class="hero-buttons">
-                    <a href="#support" class="btn btn-primary">همکاری با ما</a>
-                    <a href="#about" class="btn btn-secondary">بیشتر بدانید</a>
+                    <a href="#donation" class="btn btn-primary">همین حالا کمک کنید</a>
+                    <a href="#about" class="btn btn-outline">بیشتر بدانید</a>
                 </div>
             </div>
         </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,80C960,85,1056,139,1152,144C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
     </section>
 
-    <!-- بخش درباره ما -->
-    <section id="about" class="about">
+    <!-- درباره ما -->
+    <section class="about section" id="about">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <h2>درباره مرکز خیریه نفس</h2>
-                <p>با هم برای فردایی بهتر</p>
+                <p>با هم برای فردایی سالم‌تر</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>مرکز خیریه نفس از سال ۱۳۹۵ با هدف کمک به خانواده‌های نیازمند و بیماران خاص آغاز به کار کرده است. ما با تکیه بر کمک‌های مردمی و همراهی داوطلبان عزیز، خدمات متنوعی را به جامعه هدف ارائه می‌دهیم.</p>
-                    <p>رسالت ما ایجاد امید و بهبود کیفیت زندگی برای کسانی است که به کمک نیاز دارند. با شفافیت کامل و احترام به کرامت انسانی، در کنار هم هستیم تا نفس تازه‌ای به زندگی ببخشیم.</p>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+                    <p>مرکز خیریه نفس از سال ۱۳۹۵ با هدف ارائه خدمات درمانی، آموزشی و حمایتی به خانواده‌های کم‌برخوردار و بیماران خاص آغاز به کار کرد. ما با تکیه بر کمک‌های مردمی و همراهی داوطلبان متخصص، تلاش می‌کنیم دسترسی به سلامت را برای همه ممکن سازیم.</p>
+                    <p>شفافیت، کرامت انسانی و عدالت در سلامت، ارزش‌های بنیادین ما هستند. از تأمین هزینه‌های درمانی و دارو گرفته تا آموزش مراقبت‌های بهداشتی و روانی، در کنار شما هستیم.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-user-md"></i>
+                            <span>۲۰۰+</span>
+                            <p>داوطلب متخصص</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-procedures"></i>
+                            <span>۳۵۰۰+</span>
+                            <p>بیمار حمایت‌شده</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-heart"></i>
-                        <span>نفس - مرکز خیریه</span>
+                <div class="about-image" data-aos="fade-right" data-aos-delay="400">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="تیم خیریه نفس" onerror="this.style.display='none'">
+                        <div class="image-caption">نفس، پلی به سوی سلامتی</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- بخش فعالیت‌ها -->
-    <section id="activities" class="activities">
+    <!-- آموزش کار با دستگاه‌های پزشکی -->
+    <section class="devices section bg-light" id="devices">
         <div class="container">
-            <div class="section-header">
-                <h2>فعالیت‌های ما</h2>
-                <p>خدماتی که ارائه می‌دهیم</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>آموزش کار با دستگاه‌های پزشکی</h2>
+                <p>یادگیری استفاده صحیح از تجهیزات پزشکی در منزل</p>
             </div>
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>کمک‌های معیشتی</h3>
-                    <p>توزیع بسته‌های غذایی و اقلام ضروری بین خانواده‌های نیازمند</p>
+            <div class="devices-grid">
+                <div class="device-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="device-icon"><i class="fas fa-wind"></i></div>
+                    <h3>دستگاه اکسیژن‌ساز</h3>
+                    <p>نحوه روشن و خاموش کردن، تنظیم میزان اکسیژن، تمیز کردن فیلترها و نکات ایمنی.</p>
+                    <button class="btn-device" onclick="openDeviceModal('oxygen')">مشاهده آموزش کامل</button>
                 </div>
-                <div class="activity-card">
-                    <i class="fas fa-stethoscope"></i>
-                    <h3>حمایت از بیماران</h3>
-                    <p>تأمین هزینه‌های درمانی بیماران خاص و صعب‌العلاج</p>
+                <div class="device-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="device-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>فشارسنج دیجیتال</h3>
+                    <p>آموزش بستن کاف، اندازه‌گیری صحیح، تفسیر نتایج و زمان مناسب اندازه‌گیری.</p>
+                    <button class="btn-device" onclick="openDeviceModal('bp')">مشاهده آموزش کامل</button>
                 </div>
-                <div class="activity-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>حمایت تحصیلی</h3>
-                    <p>کمک به تحصیل دانش‌آموزان و دانشجویان نیازمند</p>
-                </div>
-                <div class="activity-card">
-                    <i class="fas fa-home"></i>
-                    <h3>مسکن و سرپناه</h3>
-                    <p>بهسازی و تأمین مسکن برای خانواده‌های بی‌بضاعت</p>
-                </div>
-                <div class="activity-card">
-                    <i class="fas fa-users"></i>
-                    <h3>اشتغال‌زایی</h3>
-                    <p>ایجاد فرصت‌های شغلی و آموزش مهارت‌های فنی</p>
-                </div>
-                <div class="activity-card">
-                    <i class="fas fa-child"></i>
-                    <h3>حمایت از کودکان</h3>
-                    <p>مراقبت و حمایت از کودکان بی‌سرپرست و بدسرپرست</p>
+                <div class="device-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="device-icon"><i class="fas fa-tint"></i></div>
+                    <h3>دستگاه تست قند خون</h3>
+                    <p>آماده‌سازی دستگاه، نمونه‌گیری از نوک انگشت، خواندن نتیجه و ثبت در دفترچه.</p>
+                    <button class="btn-device" onclick="openDeviceModal('glucose')">مشاهده آموزش کامل</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- بخش آمار و دستاوردها -->
-    <section id="stats" class="stats">
+    <!-- آموزش‌های بهداشتی و درمانی -->
+    <section class="health-edu section" id="health-edu">
         <div class="container">
-            <div class="section-header">
-                <h2>دستاوردهای ما</h2>
-                <p>با همدیگر چه کرده‌ایم</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>آموزش‌های بهداشتی و درمانی</h2>
+                <p>دانستنی‌هایی برای زندگی سالم‌تر</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3>۵۰۰۰+</h3>
-                    <p>خانواده تحت پوشش</p>
+            <div class="health-grid">
+                <div class="health-card" data-aos="flip-left" data-aos-delay="100">
+                    <i class="fas fa-hands-wash"></i>
+                    <h4>بهداشت فردی</h4>
+                    <p>شستن صحیح دست‌ها، مراقبت از دهان و دندان، استحمام اصولی.</p>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>۲۰۰۰+</h3>
-                    <p>بیمار درمان شده</p>
+                <div class="health-card" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-apple-alt"></i>
+                    <h4>تغذیه سالم</h4>
+                    <p>برنامه غذایی متعادل، ویتامین‌های ضروری و پرهیز از مواد مضر.</p>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>۱۰۰۰+</h3>
-                    <p>دانش‌آموز حمایت شده</p>
+                <div class="health-card" data-aos="flip-left" data-aos-delay="300">
+                    <i class="fas fa-dumbbell"></i>
+                    <h4>فعالیت بدنی</h4>
+                    <p>تمرینات سادهٔ روزانه، کششی و هوازی برای حفظ سلامت قلب و عروق.</p>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-building"></i>
-                    <h3>۲۰۰+</h3>
-                    <p>مسکن بهسازی شده</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>۵۰۰+</h3>
-                    <p>شغل ایجاد شده</p>
+                <div class="health-card" data-aos="flip-left" data-aos-delay="400">
+                    <i class="fas fa-brain"></i>
+                    <h4>سلامت روان</h4>
+                    <p>مدیریت استرس، تکنیک‌های تنفس عمیق و اهمیت خواب کافی.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- بخش همکاری و حمایت -->
-    <section id="support" class="support">
+    <!-- مطالب آموزشی مفید -->
+    <section class="articles section bg-light" id="articles">
         <div class="container">
-            <div class="section-header">
-                <h2>راه‌های همکاری</h2>
-                <p>شما هم می‌توانید نفس تازه‌ای ببخشید</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>مطالب آموزشی مفید</h2>
+                <p>مقالات و راهنماهای تصویری برای خانواده‌ها</p>
             </div>
-            <div class="support-grid">
-                <div class="support-card">
-                    <i class="fas fa-donate"></i>
-                    <h3>کمک نقدی</h3>
-                    <p>با هر مبلغی که در توان دارید، می‌توانید به خانواده‌های نیازمند کمک کنید</p>
+            <div class="articles-grid">
+                <article class="article-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-thumb"><i class="fas fa-baby"></i></div>
+                    <div class="article-body">
+                        <h5>مراقبت از نوزاد در خانه</h5>
+                        <p>اصول حمام کردن، تعویض پوشک و شناخت علائم خطر...</p>
+                        <a href="#" class="read-more">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="article-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-thumb"><i class="fas fa-capsules"></i></div>
+                    <div class="article-body">
+                        <h5>راهنمای مصرف صحیح داروها</h5>
+                        <p>تداخلات دارویی، زمان مناسب مصرف و عوارض جانبی...</p>
+                        <a href="#" class="read-more">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="article-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="article-thumb"><i class="fas fa-first-aid"></i></div>
+                    <div class="article-body">
+                        <h5>کمک‌های اولیه در منزل</h5>
+                        <p>سوختگی، بریدگی، خفگی و اقدامات اورژانسی تا رسیدن آمبولانس...</p>
+                        <a href="#" class="read-more">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="article-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="article-thumb"><i class="fas fa-virus"></i></div>
+                    <div class="article-body">
+                        <h5>پیشگیری از بیماری‌های واگیر</h5>
+                        <p>واکسیناسیون، رعایت بهداشت تنفسی و ضدعفونی محیط...</p>
+                        <a href="#" class="read-more">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- دوره‌ها و کارگاه‌ها -->
+    <section class="workshops section" id="workshops">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>دوره‌ها و کارگاه‌های رایگان</h2>
+                <p>همراه با گواهی پایان دوره</p>
+            </div>
+            <div class="workshop-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <h4>کارگاه کمک‌های اولیه (مقدماتی)</h4>
+                        <span class="date">۱۵ مرداد ۱۴۰۳ - ساعت ۹ صبح</span>
+                        <p>آموزش احیای قلبی-ریوی، پانسمان و آتل‌بندی. ظرفیت محدود.</p>
+                        <a href="#" class="btn btn-small">ثبت‌نام رایگان</a>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon"><i class="fas fa-smile"></i></div>
+                    <div class="timeline-content">
+                        <h4>کارگاه روانشناسی مثبت‌نگر</h4>
+                        <span class="date">۲۰ مرداد ۱۴۰۳ - ساعت ۱۶</span>
+                        <p>مدیریت اضطراب و افسردگی با تکنیک‌های CBT. ویژهٔ خانواده‌های تحت پوشش.</p>
+                        <a href="#" class="btn btn-small">ثبت‌نام رایگان</a>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon"><i class="fas fa-stethoscope"></i></div>
+                    <div class="timeline-content">
+                        <h4>کارگاه مراقبت از بیماران خاص</h4>
+                        <span class="date">۱ شهریور ۱۴۰۳ - ساعت ۱۰</span>
+                        <p>آموزش مراقبت از بیماران دیابتی، تنفسی و سالمندان در منزل.</p>
+                        <a href="#" class="btn btn-small">ثبت‌نام رایگان</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- گالری تصاویر -->
+    <section class="gallery section bg-light" id="gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>آلبوم تصاویر مرکز نفس</h2>
+                <p>لحظاتی از همدلی و خدمت</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- تصاویر نمونه، با هر تعداد که خواستید می‌توانید اضافه کنید -->
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400')">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400" alt="فعالیت خیریه">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400')">
+                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400" alt="داوطلبان">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400')">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400" alt="اهدای بسته‌های معیشتی">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400')">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400" alt="آموزش بهداشت">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400')">
+                    <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400" alt="ویزیت رایگان">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" onclick="openLightbox('https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=400')">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=400" alt="کارگاه آموزشی">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- پیوند به سایت‌های پزشکی دیگر -->
+    <section class="links section" id="links">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>پیوندهای مفید پزشکی</h2>
+                <p>دسترسی سریع به منابع معتبر سلامت</p>
+            </div>
+            <div class="links-grid">
+                <a href="https://www.who.int/fa" target="_blank" class="link-card" data-aos="fade-up">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>سازمان بهداشت جهانی (WHO)</span>
+                </a>
+                <a href="https://behdasht.gov.ir" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-hospital"></i>
+                    <span>وزارت بهداشت ایران</span>
+                </a>
+                <a href="https://www.msf.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-ambulance"></i>
+                    <span>پزشکان بدون مرز</span>
+                </a>
+                <a href="https://www.mayoclinic.org" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-clinic-medical"></i>
+                    <span>مایو کلینیک (Mayo Clinic)</span>
+                </a>
+                <a href="https://www.webmd.com" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-laptop-medical"></i>
+                    <span>WebMD</span>
+                </a>
+                <a href="https://www.iribnews.ir/fa/medical" target="_blank" class="link-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-newspaper"></i>
+                    <span>اخبار سلامت ایران</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش حمایت مالی (اهدا) -->
+    <section class="donation section bg-primary-dark" id="donation">
+        <div class="container">
+            <div class="section-header light" data-aos="fade-up">
+                <h2>حمایت مالی و صدقات</h2>
+                <p>با هر مبلغی که در توان دارید، نفس تازه‌ای ببخشید</p>
+            </div>
+            <div class="donation-card" data-aos="flip-up">
+                <div class="card-details">
                     <div class="bank-info">
-                        <p>شماره کارت: ۶۲۱۹-۸۶۱۰-۰۰۰۰-۱۲۳۴</p>
-                        <p>شماره حساب: ۴۶۰۰۰۰۰۰۰۰۰۰۰۰۰</p>
+                        <h4>شماره کارت (بانک ملی)</h4>
+                        <div class="card-number-box">
+                            <span id="mainCardNumber">۶۲۱۹-۸۶۱۰-۰۰۰۰-۱۲۳۴</span>
+                            <button class="copy-btn-large" onclick="copyMainCard()"><i class="fas fa-copy"></i> کپی شماره کارت</button>
+                        </div>
+                        <h4>شماره حساب</h4>
+                        <p>IR-۱۲۳۴۵۶۷۸۹۰۱۲۳۴۵۶۷۸۹۰۱ (بانک ملی)</p>
+                        <h4>شماره شبا</h4>
+                        <p>IR120123456789012345678901</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6219861000001234" alt="کد QR کارت" onerror="this.style.display='none'">
+                        <p>اسکن کنید</p>
                     </div>
                 </div>
-                <div class="support-card">
-                    <i class="fas fa-box-open"></i>
-                    <h3>اهدای کالا</h3>
-                    <p>می‌توانید اقلام غیرنقدی مانند لباس، کتاب و مواد غذایی اهدا کنید</p>
-                </div>
-                <div class="support-card">
-                    <i class="fas fa-hands-helping"></i>
-                    <h3>داوطلب شوید</h3>
-                    <p>با عضویت در تیم داوطلبان ما، در فعالیت‌های خیریه مشارکت کنید</p>
-                    <a href="#" class="btn btn-volunteer">ثبت‌نام داوطلب</a>
+                <div class="donation-message">
+                    <i class="fas fa-quote-right"></i>
+                    <p>«هرکس نفسی را حیات بخشد، گویا همه مردم را زنده کرده است.»</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- بخش تماس و فوتر -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>اطلاعات تماس</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان انقلاب، خیابان ۱۲ فروردین</li>
-                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
-                        <li><i class="fas fa-mobile-alt"></i> ۰۹۱۲۳۴۵۶۷۸۹</li>
-                        <li><i class="fas fa-envelope"></i> info@nafascharity.ir</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>لینک‌های مفید</h3>
-                    <ul>
-                        <li><a href="#home">خانه</a></li>
-                        <li><a href="#about">درباره ما</a></li>
-                        <li><a href="#activities">فعالیت‌ها</a></li>
-                        <li><a href="#support">حمایت</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>ما را دنبال کنید</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>مجوزها</h3>
-                    <p>مرکز خیریه نفس دارای مجوز رسمی از سازمان بهزیستی کشور به شماره ۱۲۳۴۵۶ است.</p>
-                    <p>کلیه کمک‌های شما نزد سازمان امور مالیاتی قابل کسر است.</p>
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>مرکز خیریه نفس</h4>
+                <p>تهران، خیابان انقلاب، کوچهٔ سلامت، پلاک ۱۲</p>
+                <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                <p>ایمیل: info@nafascharity.ir</p>
+            </div>
+            <div class="footer-col">
+                <h4>دسترسی سریع</h4>
+                <ul>
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#devices">آموزش دستگاه‌ها</a></li>
+                    <li><a href="#health-edu">آموزش سلامت</a></li>
+                    <li><a href="#workshops">کارگاه‌ها</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ما را دنبال کنید</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>تمامی حقوق برای مرکز خیریه نفس محفوظ است © 1405</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>تمامی حقوق برای مرکز خیریه نفس محفوظ است © ۱۴۰۳</p>
         </div>
     </footer>
 
+    <!-- مودال آموزش دستگاه‌ها -->
+    <div class="modal" id="deviceModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDeviceModal()">&times;</span>
+            <div id="modalBody">
+                <!-- محتوا با JS پر می‌شود -->
+            </div>
+        </div>
+    </div>
+
+    <!-- لایت‌باکس تصاویر -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="تصویر بزرگ" id="lightboxImg">
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
 </body>
 </html>
