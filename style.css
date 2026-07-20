@@ -85,6 +85,17 @@ img {
 .logo-icon {
     font-size: 36px;
     color: var(--accent);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .logo-text h1 {
@@ -503,6 +514,7 @@ img {
     text-align: center;
     transition: 0.3s;
     border-bottom: 4px solid transparent;
+    position: relative;
 }
 
 .health-card:hover {
@@ -525,6 +537,105 @@ img {
 .health-card p {
     color: var(--text-light);
     font-size: 14px;
+}
+
+.click-hint {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--accent);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ========== Daily News ========== */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-right: 4px solid var(--accent);
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.news-date {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.news-card h4 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.news-card p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* ========== Daily Tips ========== */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    border-right: 4px solid var(--accent);
+    transition: 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.tip-card i {
+    font-size: 30px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.tip-card p {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-style: italic;
 }
 
 /* ========== Ravanara Section ========== */
@@ -651,19 +762,6 @@ img {
     color: var(--text-light);
     font-size: 14px;
     margin-bottom: 15px;
-}
-
-.read-more {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.read-more:hover {
-    text-decoration: underline;
 }
 
 /* ========== Workshops Timeline ========== */
@@ -967,7 +1065,7 @@ img {
 .modal-content {
     background: white;
     border-radius: 20px;
-    max-width: 600px;
+    max-width: 700px;
     width: 90%;
     padding: 40px;
     position: relative;
@@ -982,6 +1080,47 @@ img {
     font-size: 32px;
     cursor: pointer;
     color: var(--text-light);
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: #e74c3c;
+}
+
+.modal-body h2 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+}
+
+.modal-body h3 {
+    color: var(--primary-dark);
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
+
+.modal-body p,
+.modal-body li {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.modal-body ul,
+.modal-body ol {
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-body .warning {
+    background: #fff3cd;
+    border-right: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #856404;
 }
 
 /* ========== Lightbox ========== */
@@ -1041,6 +1180,7 @@ img {
         gap: 20px;
         transition: 0.4s;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -1098,5 +1238,9 @@ img {
 
     .section-header h2 {
         font-size: 28px;
+    }
+
+    .modal-content {
+        padding: 25px;
     }
 }
