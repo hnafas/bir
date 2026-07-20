@@ -32,10 +32,16 @@ body {
     color: var(--text-dark);
     background-color: var(--white);
     direction: rtl;
-    overflow-x: hidden; /* بازگشت به hidden اما بدون تداخل با fixed */
+    overflow-x: visible;
+    overflow-y: auto;
     padding-top: 70px;
-    /* ایجاد یک stacking context جدید برای کل صفحه */
-    isolation: isolate;
+}
+
+/* ========== Page Wrapper ========== */
+.page-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -69,7 +75,6 @@ img {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
     z-index: 998;
     height: 70px;
-    isolation: isolate; /* جلوگیری از نشت z-index */
 }
 
 .nav {
@@ -169,7 +174,6 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    z-index: 1; /* کمتر از کارت */
 }
 
 .hero-overlay {
@@ -184,7 +188,7 @@ img {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     color: white;
     width: 100%;
@@ -296,27 +300,20 @@ img {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
 }
 
-/* ========== Floating Donation Card (اصلاح نهایی) ========== */
+/* ========== Floating Donation Card ========== */
 .donation-float {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 99999 !important; /* بالاترین z-index */
+    z-index: 99999;
     animation: float 3s ease-in-out infinite;
-    /* انتقال به GPU برای رندر مستقل */
-    transform: translateZ(0);
-    will-change: transform;
-    /* حذف هرگونه تأخیر در نمایش */
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto;
 }
 
 .float-card {
     background: var(--white);
     border-radius: 20px;
     padding: 18px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
     text-align: center;
     width: 230px;
     max-width: calc(100vw - 40px);
