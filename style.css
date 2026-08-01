@@ -98,6 +98,7 @@ img { max-width:100%; display:block; }
 .service-card:hover { transform:translateY(-5px); }
 .service-card i { font-size:40px; color:var(--accent); margin-bottom:15px; }
 .service-card h4 { color:var(--primary-dark); margin-bottom:10px; }
+.service-card p { font-size:14px; color:var(--text-light); }
 
 /* Staff */
 .staff-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:25px; }
@@ -105,13 +106,13 @@ img { max-width:100%; display:block; }
 .staff-card:hover { transform:translateY(-5px); }
 .staff-avatar { font-size:60px; color:var(--accent); margin-bottom:15px; }
 .staff-card h3 { color:var(--primary-dark); margin-bottom:5px; }
-.staff-role { display:block; color:var(--accent); font-weight:600; margin-bottom:10px; }
+.staff-role { display:block; color:var(--accent); font-weight:600; margin-bottom:10px; font-size:14px; }
 .staff-card p { color:var(--text-light); font-size:14px; }
 .staff-social { margin-top:15px; display:flex; gap:10px; justify-content:center; }
 .staff-social a { color:var(--accent); font-size:20px; }
 
 /* Psychology */
-.psychology-intro { text-align:center; max-width:700px; margin:0 auto 40px; }
+.psychology-intro { text-align:center; max-width:700px; margin:0 auto 40px; font-size:16px; }
 .psychology-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
 .psychology-card { background:white; padding:30px; border-radius:var(--radius); box-shadow:var(--shadow); text-align:center; cursor:pointer; transition:0.3s; }
 .psychology-card:hover { transform:translateY(-5px); }
@@ -134,12 +135,16 @@ img { max-width:100%; display:block; }
 .medical-card h4 { color:var(--primary-dark); margin-bottom:10px; }
 
 /* Equipment */
-.equipment-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+.equipment-intro { text-align:center; max-width:800px; margin:0 auto 40px; font-size:16px; line-height:1.8; }
+.equipment-intro strong { color:var(--primary-dark); }
+.equipment-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
 .equipment-card { background:white; border-radius:var(--radius); padding:32px 20px; box-shadow:var(--shadow); text-align:center; transition:0.3s; }
 .equipment-card:hover { transform:translateY(-8px); }
 .equipment-icon { font-size:44px; color:var(--accent); margin-bottom:18px; }
 .equipment-card h3 { font-size:20px; color:var(--primary-dark); margin-bottom:12px; }
-.btn-device { background:var(--accent); color:white; border:none; padding:10px 24px; border-radius:30px; cursor:pointer; font-weight:600; }
+.equipment-card p { color:var(--text-light); margin-bottom:22px; font-size:14px; }
+.btn-device { background:var(--accent); color:white; border:none; padding:10px 24px; border-radius:30px; cursor:pointer; font-weight:600; transition:0.3s; }
+.btn-device:hover { background:var(--primary-light); }
 
 /* Workshops */
 .workshop-timeline { position:relative; max-width:720px; margin:0 auto; padding:20px 0; }
