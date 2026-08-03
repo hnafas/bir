@@ -1,77 +1,111 @@
-// اضافه کردن به modalContents (در همان فایل script.js قبلی)
+// Toggle mobile menu
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+}
 
-'abortion-consult': `
-    <h2>💔 مشاوره سقط</h2>
-    <h3>مشاوره قبل از سقط</h3>
-    <p>تیم مامایی مرکز نفس با ارائه مشاوره تخصصی، شما را در تصمیم‌گیری آگاهانه راهنمایی می‌کند. اطلاعات کامل درباره عوارض، روش‌ها و مراقبت‌های لازم در اختیار شما قرار می‌گیرد.</p>
-    <h3>حمایت روانی پس از سقط</h3>
-    <p>احساس غم، گناه و افسردگی پس از سقط طبیعی است. روان‌شناسان مرکز نفس با همکاری تیم روان‌آرا، جلسات مشاوره رایگان برای شما فراهم می‌کنند.</p>
-    <h3>مراقبت‌های پزشکی</h3>
-    <ul>
-        <li>معاینات دوره‌ای پس از سقط</li>
-        <li>تجویز داروهای ضروری</li>
-        <li>سونوگرافی کنترل</li>
-        <li>مشاوره برای بارداری‌های آینده</li>
-    </ul>
-    <div class="warning">
-        <strong>🔹 توجه:</strong> تمام خدمات مشاوره سقط <strong>کاملاً محرمانه</strong> و با رعایت کرامت انسانی ارائه می‌شود.
-    </div>
-`,
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-link, .float-donate-btn, .hero .btn').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#' || targetId.startsWith('http')) return;
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (navMenu) navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
+        }
+    });
+});
 
-'medicine-supply': `
-    <h2>💊 تهیه و توزیع دارو</h2>
-    <h3>بیماران تحت پوشش</h3>
-    <ul>
-        <li>بیماران خاص (سرطانی، MS، تالاسمی، هموفیلی)</li>
-        <li>بیماران صعب‌العلاج</li>
-        <li>بیماران نیازمند با نسخه پزشک معتبر</li>
-    </ul>
-    <h3>نحوه دریافت دارو</h3>
-    <ol>
-        <li>ارائه نسخه پزشک معتبر به مرکز</li>
-        <li>بررسی و تأیید توسط تیم پزشکی مرکز</li>
-        <li>تهیه دارو با همکاری خیرین و داروخانه‌های طرف قرارداد</li>
-        <li>تحویل رایگان دارو به بیمار</li>
-    </ol>
-    <div class="warning">
-        <strong>🔹 توجه:</strong> اولویت با بیمارانی است که تحت پوشش هیچ نهاد حمایتی دیگری نیستند.
-    </div>
-`,
+// Copy card number (floating)
+function copyCardNumber() {
+    const cardNum = document.getElementById('cardNumber');
+    if (cardNum) {
+        navigator.clipboard.writeText(cardNum.innerText.replace(/-/g, '')).then(() => {
+            alert('شماره کارت کپی شد: ' + cardNum.innerText);
+        });
+    }
+}
 
-'oxygen-tank': `
-    <h2>🫧 کپسول اکسیژن</h2>
-    <h3>نحوه استفاده</h3>
-    <ol>
-        <li>شیر اصلی کپسول را به آرامی باز کنید.</li>
-        <li>میزان جریان (Flow) را با رگولاتور تنظیم کنید (معمولاً ۲-۵ لیتر).</li>
-        <li>ماسک یا کانوال بینی را به خروجی متصل کنید.</li>
-        <li>پس از اتمام، شیر اصلی را محکم ببندید.</li>
-    </ol>
-    <h3>نکات ایمنی</h3>
-    <ul>
-        <li>کپسول را دور از حرارت و شعله نگهداری کنید.</li>
-        <li>از روغن و گریس نزدیک شیر کپسول استفاده نکنید.</li>
-        <li>کپسول را در حالت ایستاده و محکم نگهداری کنید.</li>
-    </ul>
-    <div class="warning">
-        <strong>⚠️ هشدار:</strong> کپسول اکسیژن قابل اشتعال است. از استعمال دخانیات در نزدیکی آن خودداری کنید.
-    </div>
-`,
+// Copy card number (main donation section)
+function copyMainCard() {
+    const cardNum = document.getElementById('mainCardNumber');
+    if (cardNum) {
+        navigator.clipboard.writeText(cardNum.innerText.replace(/-/g, '')).then(() => {
+            alert('شماره کارت کپی شد: ' + cardNum.innerText);
+        });
+    }
+}
 
-'thermometer': `
-    <h2>🌡️ دماسنج دیجیتال</h2>
-    <h3>روش استفاده</h3>
-    <ol>
-        <li>دماسنج را با الکل ضدعفونی کنید.</li>
-        <li>دکمه روشن/خاموش را فشار دهید.</li>
-        <li>دماسنج را زیر زبان، زیر بغل یا مقعد (برای نوزادان) قرار دهید.</li>
-        <li>منتظر بمانید تا صدای بوق را بشنوید.</li>
-        <li>عدد نمایش داده شده را بخوانید و ثبت کنید.</li>
-    </ol>
-    <h3>مقادیر نرمال</h3>
-    <ul>
-        <li><strong>دهانی:</strong> ۳۶.۱ - ۳۷.۵ درجه سانتی‌گراد</li>
-        <li><strong>زیر بغل:</strong> ۳۵.۸ - ۳۷.۰ درجه</li>
-        <li><strong>تب:</strong> بالای ۳۸ درجه (دهانی)</li>
-    </ul>
-`
+// ========== FAB Popup Logic ==========
+const fabPopup = document.getElementById('fabPopup');
+
+function toggleFabPopup() {
+    if (fabPopup) fabPopup.classList.toggle('active');
+}
+
+function closeFabPopup() {
+    if (fabPopup) fabPopup.classList.remove('active');
+}
+
+document.addEventListener('click', function(event) {
+    const fabContainer = document.getElementById('fabContainer');
+    if (fabContainer && !fabContainer.contains(event.target)) {
+        closeFabPopup();
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && fabPopup && fabPopup.classList.contains('active')) {
+        closeFabPopup();
+    }
+});
+
+// ========== Lightbox ==========
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+function openLightbox(src) {
+    if (lightboxImg && lightbox) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+        closeLightbox();
+    }
+});
+
+// ========== Sticky header shadow on scroll ==========
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (header) {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+        } else {
+            header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+        }
+    }
+});
