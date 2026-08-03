@@ -20,12 +20,12 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Vazirmatn','Tahoma','Segoe UI',sans-serif;
-    line-height:1.7;
-    color:var(--text-dark);
-    background:var(--white);
-    direction:rtl;
-    overflow-x:hidden;
+    font-family: 'Vazirmatn', 'Tahoma', 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background: var(--white);
+    direction: rtl;
+    overflow-x: hidden;
 }
 
 /* ========== Header ========== */
@@ -48,21 +48,21 @@ body {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
 }
 
 .logo-icon {
-    font-size: 32px;
+    font-size: 34px;
     color: var(--accent);
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,21 +75,21 @@ body {
 }
 
 .logo-text h1 {
-    font-size: 24px;
+    font-size: 26px;
     color: var(--primary-dark);
     line-height: 1.2;
     font-weight: 800;
 }
 
 .logo-text span {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-light);
     letter-spacing: 1px;
 }
 
 .nav-menu {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -98,7 +98,7 @@ body {
     color: var(--text-dark);
     transition: 0.3s;
     position: relative;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -112,7 +112,7 @@ body {
     width: 0;
     height: 2px;
     background: var(--accent);
-    transition: 0.3s;
+    transition: width 0.3s;
 }
 
 .nav-link:hover::after { width: 100%; }
@@ -124,7 +124,7 @@ body {
 }
 
 .nav-toggle span {
-    width: 24px;
+    width: 25px;
     height: 3px;
     background: var(--primary-dark);
     margin: 4px;
@@ -133,68 +133,70 @@ body {
 
 /* ========== Page Content ========== */
 .page-content {
-    padding: 100px 0 60px;
+    padding: 110px 0 60px;
     min-height: 60vh;
 }
 
 .page-content .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .page-content h1 {
-    font-size: 32px;
+    font-size: 34px;
     color: var(--primary-dark);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .page-content .subtitle {
     text-align: center;
     color: var(--text-light);
-    margin-bottom: 40px;
-    font-size: 16px;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
 
 .page-content h2 {
-    font-size: 24px;
+    font-size: 26px;
     color: var(--primary-dark);
-    margin: 30px 0 15px;
-    border-right: 4px solid var(--accent);
-    padding-right: 12px;
+    margin: 40px 0 18px;
+    border-right: 5px solid var(--accent);
+    padding-right: 15px;
     font-weight: 800;
 }
 
 .page-content h3 {
-    font-size: 20px;
+    font-size: 21px;
     color: var(--primary-dark);
-    margin: 25px 0 12px;
+    margin: 30px 0 14px;
     font-weight: 700;
 }
 
 .page-content h4 {
     font-size: 18px;
     color: var(--primary-dark);
-    margin: 20px 0 10px;
+    margin: 24px 0 12px;
     font-weight: 700;
 }
 
 .page-content p {
-    margin-bottom: 16px;
-    line-height: 1.9;
+    margin-bottom: 18px;
+    line-height: 1.95;
     text-align: justify;
+    font-size: 16px;
 }
 
 .page-content ul, .page-content ol {
-    margin-bottom: 20px;
-    padding-right: 24px;
+    margin-bottom: 24px;
+    padding-right: 28px;
 }
 
 .page-content li {
-    margin-bottom: 10px;
-    line-height: 1.8;
+    margin-bottom: 12px;
+    line-height: 1.9;
+    font-size: 16px;
 }
 
 .page-content strong {
@@ -203,10 +205,11 @@ body {
 
 .page-content .highlight-box {
     background: var(--bg-light);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 24px 0;
-    border-right: 4px solid var(--accent);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 30px 0;
+    border-right: 5px solid var(--accent);
+    font-size: 16px;
 }
 
 .page-content .highlight-box strong {
@@ -215,23 +218,24 @@ body {
 
 .page-content .warning-box {
     background: #fff8e1;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 24px 0;
-    border-right: 4px solid #ffc107;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 30px 0;
+    border-right: 5px solid #ffc107;
     color: #856404;
+    font-size: 16px;
 }
 
 .page-content .info-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 14px;
+    margin: 28px 0;
+    font-size: 15px;
 }
 
 .page-content .info-table th,
 .page-content .info-table td {
-    padding: 12px 16px;
+    padding: 14px 18px;
     border: 1px solid #e2e8f0;
     text-align: right;
 }
@@ -247,53 +251,60 @@ body {
 }
 
 .breadcrumb {
-    margin-bottom: 24px;
-    font-size: 14px;
+    margin-bottom: 30px;
+    font-size: 15px;
     color: var(--text-light);
 }
 
 .breadcrumb a {
     color: var(--accent);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .breadcrumb a:hover {
     text-decoration: underline;
+    color: var(--primary-dark);
 }
 
 .breadcrumb span {
-    margin: 0 8px;
+    margin: 0 10px;
+}
+
+.breadcrumb strong {
+    color: var(--primary-dark);
 }
 
 /* ========== Footer ========== */
 .footer {
     background: var(--primary-dark);
     color: #cbd5e1;
-    padding: 48px 0 16px;
+    padding: 60px 0 20px;
     margin-top: 60px;
 }
 
 .footer .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
 }
 
 .footer-col h4 {
     color: white;
-    margin-bottom: 16px;
-    font-size: 18px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .footer-col p {
-    margin-bottom: 8px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .footer-col ul {
@@ -301,8 +312,8 @@ body {
 }
 
 .footer-col ul li {
-    margin-bottom: 8px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .footer-col ul li a {
@@ -317,12 +328,13 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 12px;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .social-icons a {
     color: #cbd5e1;
-    font-size: 20px;
+    font-size: 22px;
     transition: 0.3s;
     text-decoration: none;
 }
@@ -333,10 +345,10 @@ body {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 32px;
-    padding-top: 16px;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /* ========== Responsive ========== */
@@ -351,8 +363,8 @@ body {
         background: white;
         width: 85%;
         height: calc(100vh - 60px);
-        padding: 24px;
-        gap: 16px;
+        padding: 30px;
+        gap: 20px;
         transition: 0.4s;
         overflow-y: auto;
         box-shadow: -5px 0 20px rgba(0,0,0,0.1);
@@ -362,11 +374,12 @@ body {
     .nav-toggle { display: flex; }
     
     .page-content {
-        padding: 80px 0 40px;
+        padding: 90px 0 40px;
     }
     
-    .page-content h1 { font-size: 26px; }
-    .page-content h2 { font-size: 20px; }
-    .page-content h3 { font-size: 18px; }
-    .page-content h4 { font-size: 16px; }
+    .page-content h1 { font-size: 28px; }
+    .page-content h2 { font-size: 22px; }
+    .page-content h3 { font-size: 19px; }
+    .page-content h4 { font-size: 17px; }
+    .page-content p, .page-content li { font-size: 15px; }
 }
